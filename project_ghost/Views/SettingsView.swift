@@ -20,7 +20,7 @@ struct SettingsView: View {
     @State var validToken: Bool = Defaults.shared.get(forKey: "validToken") ?? false
     
     @State var curImage: String = Defaults.shared.get(forKey: "validToken") ?? false ? "checkmark" : "xmark"
-    @State var curColor: Color = Defaults.shared.get(forKey: "validToken") ?? false ? .green : .blue
+    @State var curColor: Color = Defaults.shared.get(forKey: "validToken") ?? false ? .green : .red
     
     @State private var tokenUnlocked = false
     
