@@ -36,6 +36,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     }
     //end
     
+    
+    // Ghost window setup
     var window: NSWindow!
     func applicationWillFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(Defaults.shared.get(forKey: "hideIcon") ?? false ? .accessory : .regular)
@@ -69,8 +71,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.setFrameOrigin(newPosition)
     }
     
-    func updateActivationPolicy(to policy: NSApplication.ActivationPolicy) {}
+    // show or hide the app Icon
+    func updateActivationPolicy(to policy: NSApplication.ActivationPolicy) {
+        NSApp.setActivationPolicy(policy)
+        NSApp.activate(ignoringOtherApps: true)
+    }
     
+    // control the ghost that chases the cursor
     func summonGhost() {
         DispatchQueue.main.async {
             self.window.orderFront(nil)

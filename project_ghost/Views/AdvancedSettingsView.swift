@@ -32,10 +32,10 @@ struct AdvancedSettingsView: View {
             
             settingItem(title: "Top_p",
                         value: $top_p,
-                        range: 0...2,
+                        range: 0...1,
                         step: 0.05,
                         key: "top_p",
-                        info: "Very similar to temperature.")
+                        info: "very similar to temperature.\nmight increase response time.")
             
             Text("It is generally advised to only alter one of the above  values at a time.")
                 .font(.footnote)
@@ -56,7 +56,7 @@ struct AdvancedSettingsView: View {
                         range: -2...2,
                         step: 0.1,
                         key: "presencePenalty",
-                        info: "Determines how much GPT is\nencouraged to stay on topic",
+                        info: "Determines how much GPT is\nencouraged to stay on topic.",
                         enableToggle: $enablePP)
             
             settingItem(title: "Frequency Penalty",
@@ -66,6 +66,25 @@ struct AdvancedSettingsView: View {
                         key: "frequencyPenalty",
                         info: "Determines how likely GPT is\nto repeat itself.",
                         enableToggle: $enableFP)
+            Text("At their extremes, these values have a tendency to greatly incrase response time.")
+                .font(.footnote)
+                .padding(.bottom, 10).zIndex(-1)
+            Button("Reset to Defaults") {
+                Defaults.shared.set(1, forKey: "temperature")
+                Defaults.shared.set(1, forKey: "top_p")
+                Defaults.shared.set(5000, forKey: "maxTokens")
+                Defaults.shared.set(0, forKey: "presencePenalty")
+                Defaults.shared.set(false, forKey: "enablePP")
+                Defaults.shared.set(0, forKey: "frequencyPenalty")
+                Defaults.shared.set(false, forKey: "enableFP")
+                temperature = 1
+                top_p = 1
+                maxTokens = 5000
+                presencePenalty = 0
+                enablePP = false
+                frequencyPenalty = 0
+                enableFP = false
+            }
         }
         .padding()
     }

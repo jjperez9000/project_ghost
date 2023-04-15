@@ -101,7 +101,6 @@ class ChatDriver {
                 codeChat.append(ChatMessage(role: .assistant, content: result.choices?.first?.message.content ?? "(there is no response)"))
             } else {
                 chat.append(ChatMessage(role: .user, content: question))
-                print(Defaults.shared.get(forKey: "maxTokens") ?? 26)
                 result = try await openAI.sendChat(
                     with: chat,
                     temperature: Defaults.shared.get(forKey: "temperature") ?? 1.0,

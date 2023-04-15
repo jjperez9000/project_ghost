@@ -4,12 +4,9 @@
 //
 //  Created by John Perez on 2/21/23.
 //
-// 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 TODO: Remove this
 import SwiftUI
 import KeyboardShortcuts
 
-
-// add comments to this code file:
 struct ContentView: View {
     @State private var currentViewIndex: Int = Defaults.shared.get(forKey: "currentView") ?? 0
     var body: some View {
