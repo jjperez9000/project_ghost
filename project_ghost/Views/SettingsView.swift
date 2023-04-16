@@ -56,15 +56,17 @@ struct SettingsView: View {
                                 }
                             }
                             .textFieldStyle(RoundedBorderTextFieldStyle()).disabled(!tokenUnlocked)
+                        
                     }
-                    
                     // Current status image for the API Key (valid/invalid)
                     Image(systemName: curImage)
                         .foregroundColor(curColor)
                         .offset(x: offsetDist)
                 }.frame(width: objectWidth)
-            }
-            .padding(.trailing, 100)
+            }.padding(.trailing, 100)
+            
+            Link("(how do I get an api key?)", destination: URL(string: "https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key")!).padding(.bottom,10)
+            
             
             // Activation Sequence section
             HStack {
@@ -128,6 +130,7 @@ struct SettingsView: View {
                 
             }
             .padding(.trailing, 100)
+            
         }.padding()
     }
 }
