@@ -93,7 +93,7 @@ struct SettingsView: View {
                 
             }
             .padding(.trailing, 100)
-            
+    
             // Output Mode section
             HStack {
                 Text("Output Mode").frame(width: textWidth, alignment: .trailing)
@@ -130,6 +130,7 @@ struct SettingsView: View {
                 
             }
             .padding(.trailing, 100)
+
             
         }.padding()
     }

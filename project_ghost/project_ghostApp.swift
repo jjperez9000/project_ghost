@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// add comments to this code:
 @main
 struct project_ghost: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -14,7 +15,7 @@ struct project_ghost: App {
     @Environment(\.openWindow) private var openWindow
     
     var body: some Scene {
-        WindowGroup("Haunted Mac", id: "1") {
+        WindowGroup("SpiritAI", id: "1") {
             ContentView()
         }
         .windowResizabilityContentSize()
@@ -25,8 +26,7 @@ struct project_ghost: App {
                 }
                 NSApp.activate(ignoringOtherApps: true)
             }
-            Button("Exit") {
-                //https://stackoverflow.com/questions/70160320/how-can-i-close-quit-my-app-in-macos-swiftui-life-cycle
+            Button("Quit") {
                 NSApp.terminate(nil)
             }
         }

@@ -35,6 +35,7 @@ final class AppState: ObservableObject {
     init() {
         KeyboardShortcuts.onKeyUp(for: .sendQ) { [self] in
             chatDriver.performResponse()
+
         }
         KeyboardShortcuts.onKeyUp(for: .sendCodingQ) { [self] in
             chatDriver.performResponse(codeMode: true)

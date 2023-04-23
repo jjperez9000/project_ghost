@@ -18,6 +18,7 @@ class Typer: ObservableObject {
     }
     public func typeOutAnswer(answer: String) {
         for character in answer {
+            print(character)
             var isShift: Bool = false
             var characterKeyCode = self.allCodes[character] ?? 0x00
             let source = CGEventSource(stateID: .hidSystemState)
@@ -34,8 +35,8 @@ class Typer: ObservableObject {
                 keyDown!.flags = []
                 keyUp!.flags = []
             }
-            keyDown?.post(tap: .cghidEventTap)
-            keyUp?.post(tap: .cghidEventTap)
+            keyDown!.post(tap: .cghidEventTap)
+            keyUp!.post(tap: .cghidEventTap)
         }
     }
     

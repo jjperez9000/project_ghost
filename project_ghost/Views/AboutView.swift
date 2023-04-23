@@ -10,7 +10,7 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         VStack{
-            Text("Welcome to Haunted Mac")
+            Text("Welcome to SpiritAI")
                 .font(.system(.title))
                 .padding(.bottom, 20)
             Text("This app allows you to get answers from GPT anywhere on your Mac by reading and writing to your clipboard.")
@@ -31,3 +31,4 @@ struct AboutView_Previews: PreviewProvider {
         AboutView()
     }
 }
+

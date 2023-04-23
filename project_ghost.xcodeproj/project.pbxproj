@@ -29,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4966F5E229F093950007324F /* project-ghost-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "project-ghost-Info.plist"; sourceTree = SOURCE_ROOT; };
 		499BE7EE29EACA0D0036088D /* project_ghost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project_ghost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499BE7F529EACA0E0036088D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		499BE7F829EACA0E0036088D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		499BE7F029EACA0D0036088D /* project_ghost */ = {
 			isa = PBXGroup;
 			children = (
+				4966F5E229F093950007324F /* project-ghost-Info.plist */,
 				499BE7F529EACA0E0036088D /* Assets.xcassets */,
 				499BE7FA29EACA0E0036088D /* project_ghost.entitlements */,
 				499BE80429EACB080036088D /* ghost.gif */,
@@ -356,6 +358,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "project-ghost-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,6 +390,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "project-ghost-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
